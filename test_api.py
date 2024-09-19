@@ -7,7 +7,6 @@ from dotenv import load_dotenv
 load_dotenv()
 
 def_repo_name = os.getenv("repo_name")
-# input_repo_name = input('Впишите имя репозитория: ')
 
 def check_repo():
     is_repo = requests.get(f'https://api.github.com/repos/{os.getenv("username")}/{def_repo_name}')
